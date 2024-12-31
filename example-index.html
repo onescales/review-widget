@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Widget Implementation</title>
+</head>
+<body style="min-height: 100vh; margin: 0;">
+    <h1>Test Page</h1>
+    <p>The review widget should appear at the bottom and rotate every 5 seconds.</p>
+    
+    <script src="review-widget.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            ReviewWidget.init({
+                rotationSpeed: 5000, // rotation speed
+                desktopAlignment: 'right', // Options: 'left', 'right', 'center'
+                minStars: 4, // Only show reviews with 4 stars or above
+                order: 'top-to-bottom', // Options: 'random' or 'top-to-bottom'
+                hideOnMobile: 'no', // Options: 'yes' or 'no'
+                initZIndex: 2147483647, // Custom z-index
+                reviews: [
+    {
+        name: "John Doe",
+        stars: 4,
+        on: "Google",
+        date: "Dec 12 2025"
+    },
+    {
+        name: "Yossi McMillan",
+        stars: 5,
+        on: "FB",
+        date: "Jan 12 2026"
+    },
+    {
+        name: "Anna Carter",
+        stars: 1,
+        on: "Yelp",
+        date: "Feb 14 2025"
+    },
+    {
+        name: "Mike Summers",
+        stars: 3,
+        on: "Google",
+        date: "Mar 10 2025"
+    },
+    {
+        name: "Emily Ross",
+        stars: 5,
+        on: "Google",
+        date: "Apr 5 2025"
+    },
+    {
+        name: "Sarah Lee",
+        stars: 2,
+        on: "FB",
+        date: "Jun 15 2025"
+    },
+    {
+        name: "Jake Howard",
+        stars: 4,
+        on: "Yelp",
+        date: "Jul 21 2025"
+    },
+    {
+        name: "Nina Patel",
+        stars: 5,
+        on: "FB",
+        date: "Aug 18 2025"
+    },
+    {
+        name: "Omar Ruiz",
+        stars: 1,
+        on: "Google",
+        date: "Sep 12 2025"
+    },
+    {
+        name: "Helen Cooper",
+        stars: 3,
+        on: "Yelp",
+        date: "Oct 9 2025"
+    },
+    {
+        name: "Alex Turner",
+        stars: 5,
+        on: "Google",
+        date: "Nov 1 2025"
+    },
+    {
+        name: "Mia Johnson",
+        stars: 2,
+        on: "FB",
+        date: "Dec 20 2025"
+    },
+    {
+        name: "Sophia Clark",
+        stars: 4,
+        on: "Google",
+        date: "Jan 15 2026"
+    },
+    {
+        name: "Daniel Evans",
+        stars: 5,
+        on: "Yelp",
+        date: "Feb 10 2026"
+    },
+    {
+        name: "Chris Morgan",
+        stars: 1,
+        on: "Google",
+        date: "Mar 8 2026"
+    },
+    {
+        name: "Leah Bennett",
+        stars: 3,
+        on: "FB",
+        date: "Apr 2 2026"
+    },
+    {
+        name: "James King",
+        stars: 4,
+        on: "Yelp",
+        date: "May 14 2026"
+    },
+    {
+        name: "Emma Foster",
+        stars: 2,
+        on: "Google",
+        date: "Jun 30 2026"
+    },
+    {
+        name: "Liam Scott",
+        stars: 5,
+        on: "FB",
+        date: "Jul 22 2026"
+    },
+    {
+        name: "Isabella Adams",
+        stars: 3,
+        on: "Yelp",
+        date: "Aug 19 2026"
+    }
+]
+            });
+        });
+    </script>
+</body>
+</html>
