@@ -9,6 +9,8 @@ So we built one you can use for free. Hope this helps you out there.
 
 1. Copy code from review-widget.js to your website - see url at https://github.com/onescales/review-widget/blob/main/review-widget.js
 2. On any page you want to embed the widget, just add the following:
+
+```
 <script src="review-widget.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -36,7 +38,8 @@ So we built one you can use for free. Hope this helps you out there.
             });
         });
     </script>
-3. 
+```
+
 
 # Additional Notes
 - All code and instructions are as is. By reading this repository, readme or any code, you acknowledge that you are solely responsible for your own doings.
