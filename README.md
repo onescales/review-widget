@@ -61,6 +61,7 @@ make sure to add:
 
 # Additional Notes
 - All code and instructions are as is. By reading this repository, readme or any code, you acknowledge that you are solely responsible for your own doings.
+- Link to website article with instructions: https://onescales.com/blogs/main/review-widget
 
 Hope you liked this!
 
