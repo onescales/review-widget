@@ -7,7 +7,36 @@ So we built one you can use for free. Hope this helps you out there.
 
 # How to Use
 
-1. L
+1. Copy code from review-widget.js to your website - see url at https://github.com/onescales/review-widget/blob/main/review-widget.js
+2. On any page you want to embed the widget, just add the following:
+<script src="review-widget.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            ReviewWidget.init({
+                rotationSpeed: 5000, // rotation speed
+                desktopAlignment: 'right', // Options: 'left', 'right', 'center'
+                minStars: 4, // Only show reviews with 4 stars or above
+                order: 'top-to-bottom', // Options: 'random' or 'top-to-bottom'
+                hideOnMobile: 'no', // Options: 'yes' or 'no'
+                initZIndex: 2147483647, // Custom z-index
+                reviews: [
+    {
+        name: "John Doe",
+        stars: 4,
+        on: "Google",
+        date: "Dec 12 2025"
+    },
+    {
+        name: "Yossi McMillan",
+        stars: 5,
+        on: "FB",
+        date: "Jan 12 2026"
+    }
+]
+            });
+        });
+    </script>
+3. 
 
 # Additional Notes
 - All code and instructions are as is. By reading this repository, readme or any code, you acknowledge that you are solely responsible for your own doings.
