@@ -8,9 +8,9 @@ So we built one you can use for free. Currently you have to list the reviews in 
 # How to Use
 
 1. Copy code from review-widget.js to your website - see url at https://github.com/onescales/review-widget/blob/main/review-widget.js
-2. On any page you want to embed the widget, just add the following:
+2. On any page you want to embed the widget, just below the code shown. Also see below settings:
 
-settings and comments:
+Settings and comments:
 a. make sure to link the entire url of review-widget.js
 b. add your reviews via the reviews: [ section ]. 
 currently we have 2 in example code below:
