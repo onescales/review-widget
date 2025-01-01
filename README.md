@@ -10,6 +10,24 @@ So we built one you can use for free. Hope this helps you out there.
 1. Copy code from review-widget.js to your website - see url at https://github.com/onescales/review-widget/blob/main/review-widget.js
 2. On any page you want to embed the widget, just add the following:
 
+settings and comments:
+a. make sure to link the entire url of review-widget.js
+b. add your reviews via the reviews: [ section ]. 
+currently we have 2 in example code below:
+make sure to add:
+- Name (name of reviewer)
+- Stars (1-5 stars)
+- on (which site you got the reviews from)
+- date (date of review)
+
+c. rotationSpeed (speed to rotate between reviews - 5000 = 5 seconds)
+d. desktopAlignment (where to display on desktop)
+e. minStars (show reviews from this number and above)
+f. order (show reviews by order of list or random)
+g. hideOnMobile (hide on mobile: yes or no)
+h. initZIndex (z index - in case widget is behind other elements on page)
+
+
 ```
 <script src="review-widget.js"></script>
     <script>
