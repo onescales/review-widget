@@ -11,8 +11,8 @@ So we built one you can use for free. Currently you have to list the reviews in 
 2. On any page you want to embed the widget, just below the code shown. Also see below settings:
 
 Settings and comments:
-a. make sure to link the entire url of review-widget.js
-b. add your reviews via the reviews: [ section ]. 
+1) make sure to link the entire url of review-widget.js
+2) add your reviews via the reviews: [ section ]. 
 currently we have 2 in example code below:
 make sure to add:
 - Name (name of reviewer)
@@ -20,12 +20,12 @@ make sure to add:
 - on (which site you got the reviews from)
 - date (date of review)
 
-c. rotationSpeed (speed to rotate between reviews - 5000 = 5 seconds)
-d. desktopAlignment (where to display on desktop)
-e. minStars (show reviews from this number and above)
-f. order (show reviews by order of list or random)
-g. hideOnMobile (hide on mobile: yes or no)
-h. initZIndex (z index - in case widget is behind other elements on page)
+3) rotationSpeed (speed to rotate between reviews - 5000 = 5 seconds)
+4) desktopAlignment (where to display on desktop)
+5) minStars (show reviews from this number and above)
+6) order (show reviews by order of list or random)
+7) hideOnMobile (hide on mobile: yes or no)
+8) initZIndex (z index - in case widget is behind other elements on page)
 
 
 ```
