@@ -1,7 +1,7 @@
 # Review Widget To Show Off Trust
 We had made a Free Review Widget to Show Off Your Reviews to (Hopefully) increase conversons on your site.
 
-For our personal proejcts, we had pay $750-$100 / month for review widgets and couldn't find a cheaper solution. (note that there are paid solutions which also sync reviews and ask for reviews but there was no cheap solution for just showing reviews). 
+For our personal proejcts, we had pay $75-$100 / month for review widgets and couldn't find a cheaper solution. (note that there are paid solutions which also sync reviews and ask for reviews but there was no cheap solution for just showing reviews). 
 
 So we built one you can use for free. Hope this helps you out there.
 
