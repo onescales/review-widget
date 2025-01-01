@@ -11,7 +11,7 @@ So we built one you can use for free. Currently you have to list the reviews in 
 - On any page you want to embed the widget, just below the code shown. Also see below settings:
 
 Settings and comments:
-1) make sure to link the entire url of review-widget.js
+1) make sure to link the entire url of review-widget.js in <script src="review-widget.js"></script>
 2) add your reviews via the reviews: [ section ]. 
 currently we have 2 in example code below:
 make sure to add:
