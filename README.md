@@ -19,12 +19,13 @@ make sure to add the following columns: (see example csv: https://github.com/one
 - on (which site you got the reviews from)
 - date (date of review)
 
-3) rotationSpeed (speed to rotate between reviews - 5000 = 5 seconds)
-4) desktopAlignment (where to display on desktop)
-5) minStars (show reviews from this number and above)
-6) order (show reviews by order of list or random)
-7) hideOnMobile (hide on mobile: yes or no)
-8) initZIndex (z index - in case widget is behind other elements on page)
+3) csvUrl: 'DOMAIN-URL/reviews.csv', (Place full url of review CSV you uploaded)
+4) rotationSpeed (speed to rotate between reviews - 5000 = 5 seconds)
+5) desktopAlignment (where to display on desktop)
+6) minStars (show reviews from this number and above)
+7) order (show reviews by order of list or random)
+8) hideOnMobile (hide on mobile: yes or no)
+9) initZIndex (z index - in case widget is behind other elements on page)
 
 
 ```
