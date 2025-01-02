@@ -28,7 +28,7 @@ make sure to add the following columns: (see example csv: https://github.com/one
 
 
 ```
-<script src="review-widget.js"></script>
+<script src="DOMAIN-URL/review-widget.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             ReviewWidget.init({
