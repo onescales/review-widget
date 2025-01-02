@@ -12,9 +12,8 @@ So we built one you can use for free. Currently you have to list the reviews in 
 
 Settings and comments:
 1) make sure to link the entire url of review-widget.js in <script src="review-widget.js"></script>
-2) add your reviews via the reviews: [ section ]. 
-currently we have 2 in example code below:
-make sure to add:
+2) add your reviews to a csv (excel), save as reviews.csv and upload to your site.
+make sure to add the following columns: (see example csv: https://github.com/onescales/review-widget/blob/main/reviews.csv )
 - Name (name of reviewer)
 - Stars (1-5 stars)
 - on (which site you got the reviews from)
