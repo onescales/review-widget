@@ -32,26 +32,13 @@ make sure to add the following columns: (see example csv: https://github.com/one
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             ReviewWidget.init({
+                csvUrl: 'DOMAIN-URL/reviews.csv', // Replace with your CSV file URL
                 rotationSpeed: 5000, // rotation speed
                 desktopAlignment: 'right', // Options: 'left', 'right', 'center'
                 minStars: 4, // Only show reviews with 4 stars or above
                 order: 'top-to-bottom', // Options: 'random' or 'top-to-bottom'
                 hideOnMobile: 'no', // Options: 'yes' or 'no'
                 initZIndex: 2147483647, // Custom z-index
-                reviews: [
-    {
-        name: "John Doe",
-        stars: 4,
-        on: "Google",
-        date: "Dec 12 2025"
-    },
-    {
-        name: "Yossi McMillan",
-        stars: 5,
-        on: "FB",
-        date: "Jan 12 2026"
-    }
-]
             });
         });
     </script>
@@ -61,6 +48,7 @@ make sure to add the following columns: (see example csv: https://github.com/one
 # Additional Notes
 - All code and instructions are as is. By reading this repository, readme or any code, you acknowledge that you are solely responsible for your own doings.
 - Link to website article with instructions: https://onescales.com/blogs/main/review-widget
+- You should consider automating the reading/fetching of reviews to that this can be automatic. Consider zapier or similar apps.
 
 Hope you liked this!
 
