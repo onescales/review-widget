@@ -8,11 +8,11 @@
     <h1>Test Page</h1>
     <p>The review widget should appear at the bottom and rotate every 5 seconds.</p>
     
-    <script src="review-widget.js"></script>
+    <script src="DOMAIN-URL/review-widget.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             ReviewWidget.init({
-                csvUrl: 'PATH-TO-URL/reviews.csv', // Replace with your CSV file URL
+                csvUrl: 'DOMAIN-URL/reviews.csv', // Replace with your CSV file URL
                 rotationSpeed: 5000, // rotation speed
                 desktopAlignment: 'right', // Options: 'left', 'right', 'center'
                 minStars: 4, // Only show reviews with 4 stars or above
