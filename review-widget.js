@@ -4,13 +4,68 @@ const ReviewWidget = {
   rotationInterval: null,
 
   init: function(config = {}) {
-    this.reviews = config.reviews || [];
-    const rotationSpeed = config.rotationSpeed || 5000; // Default 5 seconds
-    const desktopAlignment = config.desktopAlignment || 'center'; // Default center
-    const minStars = config.minStars || 0; // Minimum stars filter, default to 0 (show all)
-    const order = config.order || 'top-to-bottom'; // Order of reviews: "random" or "top-to-bottom"
-    const hideOnMobile = config.hideOnMobile || 'no'; // Hide widget on mobile: "yes" or "no"
-    const initZIndex = config.initZIndex || 9999; // Default z-index
+    const csvUrl = config.csvUrl; // New CSV URL parameter
+    if (!csvUrl) {
+      console.error('CSV URL is required');
+      return;
+    }
+
+    // Fetch and process CSV before initializing the widget
+    this.loadReviewsFromCsv(csvUrl, (loadedReviews) => {
+      this.reviews = loadedReviews;
+      this.initializeWidget(config);
+    });
+  },
+
+  loadReviewsFromCsv: function(url, callback) {
+    fetch(url)
+      .then(response => response.text())
+      .then(csv => {
+        // Parse CSV and convert to review objects
+        const reviews = this.parseCsv(csv);
+        callback(reviews);
+      })
+      .catch(error => {
+        console.error('Error loading CSV:', error);
+        callback([]);
+      });
+  },
+
+  parseCsv: function(csv) {
+    const lines = csv.split('\n');
+    const reviews = [];
+    
+    // Skip header row and process each line
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line) {
+        const [name, stars, on, date] = line.split(',').map(field => field.trim());
+        
+        // Convert date from YYYY-MM-DD to MMM DD YYYY
+        const formattedDate = new Date(date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: '2-digit'
+        });
+
+        reviews.push({
+          name: name,
+          stars: parseInt(stars),
+          on: on,
+          date: formattedDate
+        });
+      }
+    }
+    return reviews;
+  },
+
+  initializeWidget: function(config) {
+    const rotationSpeed = config.rotationSpeed || 5000;
+    const desktopAlignment = config.desktopAlignment || 'center';
+    const minStars = config.minStars || 0;
+    const order = config.order || 'top-to-bottom';
+    const hideOnMobile = config.hideOnMobile || 'no';
+    const initZIndex = config.initZIndex || 9999;
 
     // Filter reviews based on minimum stars
     this.reviews = this.reviews.filter(review => review.stars >= minStars);
@@ -50,11 +105,11 @@ const ReviewWidget = {
       }
 
       .notification:first-child {
-        font-size: 14px; /* Smaller font size for the first notification */
+        font-size: 14px;
       }
 
       .notification .details {
-        font-size: 12px; /* Smaller font size for the date row */
+        font-size: 12px;
       }
 
       .notification.fade-out {
@@ -187,7 +242,6 @@ const ReviewWidget = {
     const container = document.getElementById('notifications-container');
     container.innerHTML = this.createNotification(this.reviews[this.currentIndex]);
 
-    // Apply font-size dynamically if needed
     const firstNotification = container.querySelector('.notification');
     if (this.currentIndex === 0 && firstNotification) {
       firstNotification.style.fontSize = '14px';
@@ -202,15 +256,12 @@ const ReviewWidget = {
     const container = document.getElementById('notifications-container');
     const notification = container.querySelector('.notification');
     
-    // Fade out current review
     notification.classList.add('fade-out');
     
     setTimeout(() => {
-      // Update index
       this.currentIndex = (this.currentIndex + 1) % this.reviews.length;
-      // Show new review
       this.showCurrentReview();
-    }, 300); // Match the CSS transition duration
+    }, 300);
   },
 
   startRotation: function(speed) {
